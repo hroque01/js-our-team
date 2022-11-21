@@ -16,45 +16,66 @@
 const personale = [
     {
         "nome" : 'Wayne Barnett',
-        "Ruolo" : 'Founder & CEO'
+        "Ruolo" : 'Founder & CEO',
+        "foto" : "img/wayne-barnett-founder-ceo.jpg"
     },
 
     {
         "nome" : 'Angela Caroll',
-        "Ruolo" : 'Chief Editor'
+        "Ruolo" : 'Chief Editor',
+        "foto" : "img/angela-caroll-chief-editor.jpg"
     },
 
     {
         "nome" : 'Walter Gordon',
-        "Ruolo" : 'Office Manager'
+        "Ruolo" : 'Office Manager',
+        "foto" : "img/walter-gordon-office-manager.jpg"
     },
 
     {
         "nome" : 'Angela Lopez',
-        "Ruolo" : 'Social Media Manager'
+        "Ruolo" : 'Social Media Manager',
+        "foto" : "img/angela-lopez-social-media-manager.jpg"
     },
     
     {
         "nome" : 'Scott Estrada',
-        "Ruolo" : 'Developer'
+        "Ruolo" : 'Developer',
+        "foto" : "img/scott-estrada-developer.jpg"
     },
 
     {
         "nome" : 'Barbara Ramos',
-        "Ruolo" : 'Graphic Designer'
+        "Ruolo" : 'Graphic Designer',
+        "foto" : "img/barbara-ramos-graphic-designer.jpg" 
     }
-
 ]
+// document.querySelector(".card").innerHTML = JSON.stringify(personale, null, 4)
 
+cards();
 
+function cards () {
 
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
-// BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva
-// BONUS 2:
-// Organizzare i singoli membri in card/schede
+    for (let i = 0; i < personale.length; i++) {
+        
+        
+        // BONUS 1:
+        // Trasformare la stringa foto in una immagine effettiva
+        let newCard = `
+        <div class="card">
+            <img src="${personale[i].foto}" alt="">
+            <div id="persona">
+                <div>${personale[i].nome}</div>
+                <div>${personale[i].Ruolo}</div>
+            </div>
+        </div>
+        `
+
+        // BONUS 2:
+        // Organizzare i singoli membri in card/schede
+        const container=document.querySelector(".container").innerHTML += newCard
+    
+    }
+}
 
 
