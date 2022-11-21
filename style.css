@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    margin: 0 auto;
+}
+
+.card {
+    /* debug */
+    min-height: 400px;
+    width: 320px;
+    background-color: red;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
