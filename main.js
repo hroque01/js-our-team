@@ -50,6 +50,8 @@ const personale = [
         "foto" : "img/barbara-ramos-graphic-designer.jpg" 
     }
 ]
+
+console.log(personale)
 // document.querySelector(".card").innerHTML = JSON.stringify(personale, null, 4)
 
 cards();
@@ -64,9 +66,9 @@ function cards () {
         let newCard = `
         <div class="card">
             <img src="${personale[i].foto}" alt="">
-            <div id="persona">
-                <div>${personale[i].nome}</div>
-                <div>${personale[i].Ruolo}</div>
+            <div>
+                <div class="center">${personale[i].nome}</div>
+                <div class="center">${personale[i].Ruolo}</div>
             </div>
         </div>
         `
